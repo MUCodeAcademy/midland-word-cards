@@ -51,6 +51,16 @@ export function GameProvider(props) {
     return cards;
   }, []);
   const [activeTeam, setActiveTeam] = useState("red");
+  function switchTeam(activeTeam) {
+    if (activeTeam === "red") {
+      setActiveTeam("blue")
+    } else {
+      if (activeTeam === "blue") {
+        setActiveTeam("red")
+      }
+    }
+  }
+
   const [selectedCard, setSelectedCard] = useState({});
   return (
     <GameContext.Provider
@@ -72,6 +82,7 @@ export function GameProvider(props) {
         createCards,
         setSelectedCard,
         selectedCard,
+        switchTeam,
       }}
     >
       {props.children}
