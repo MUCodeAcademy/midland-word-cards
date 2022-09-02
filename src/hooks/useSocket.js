@@ -103,7 +103,7 @@ export default function useSocket(lobby) {
             }
           })
         );
-        endTurn(switchTeam);
+        endTurn();
       }
     });
   }, []);

@@ -11,7 +11,7 @@ import TeamDisplay from "./TeamDisplay/TeamDisplay";
 function GamePage() {
   const { lobby } = useParams();
 
-  const { joinTeam, sendClue, sendCards, sendSelectedCard } = useSocket(lobby);
+  const { joinTeam, sendClue, sendCards, sendSelectedCard, endTurn } = useSocket(lobby);
 
   const { gameStatus, players } = useGameContext();
   const redTeam = useMemo(
@@ -69,7 +69,7 @@ function GamePage() {
         </Grid>
         {gameStatus == "started" && (
           <Grid item xs={12} md={8} order={{ xs: 1, md: 2 }}>
-            <GameBoard sendSelectedCard={sendSelectedCard} />
+            <GameBoard sendSelectedCard={sendSelectedCard} endTurn={endTurn} />
             <Clue sendClue={sendClue} />
           </Grid>
         )}
