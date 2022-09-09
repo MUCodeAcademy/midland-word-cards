@@ -127,7 +127,11 @@ function NavMenu() {
           </Typography>
           {/* Mobile Lobby Code */}
           {lobbyCode && (
-            <>
+            <Grid
+              sx={{
+                display: { xs: "flex", md: "none", lg: "none" },
+              }}
+            >
               <Typography
                 sx={{
                   display: { xs: "flex", md: "none", lg: "none" },
@@ -141,7 +145,7 @@ function NavMenu() {
               > */}
               <ClickToCopy copyText={lobbyCode}></ClickToCopy>
               {/* </MenuItem> */}
-            </>
+            </Grid>
           )}
           {/* desktop links: */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
