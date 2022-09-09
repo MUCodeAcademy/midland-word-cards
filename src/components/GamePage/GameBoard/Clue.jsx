@@ -60,7 +60,7 @@ function Clue({ sendClue }) {
                   }
                   onClick={() => {
                     sendClue(clueInput);
-                    setClueInput(null);
+                    setClueInput("");
                   }}
                 >
                   Send

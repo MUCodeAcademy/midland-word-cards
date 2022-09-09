@@ -74,17 +74,6 @@ function GamePage() {
           height: "100%",
         }}
       >
-        <div className="margin-auto zindex">
-          <Typography
-            mt={2}
-            mb={2}
-            variant="h4"
-            align={"center"}
-            sx={{ marginTop: 0 }}
-          >
-            {lobby}
-          </Typography>
-        </div>
         <Modal open={gameStatus === "game over"} size="lg">
           {/* <div style={{ marginTop: 20, width: 340 }}> */}
           <Box sx={style}>
@@ -165,12 +154,3 @@ function GamePage() {
 }
 
 export default GamePage;
-
-
-
-
-
-
-
-
-
