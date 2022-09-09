@@ -28,7 +28,6 @@ export function GameProvider(props) {
       }
     }
 
-
     let cards = words.map((word, idx) => {
       let type;
       let color;
